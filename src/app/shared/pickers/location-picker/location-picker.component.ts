@@ -17,6 +17,9 @@ export class LocationPickerComponent implements OnInit {
 
   onPickLocation() {
     this.modalCtrl.create({ component: MapModalComponent }).then(modalEl => {
+      modalEl.onDidDismiss().then(modelData => {
+        console.log(modelData.data);
+      });
       modalEl.present();
     });
   }
