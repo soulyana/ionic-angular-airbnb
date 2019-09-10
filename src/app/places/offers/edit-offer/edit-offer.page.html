@@ -14,8 +14,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <div *ngIf="isLoading" text-center>
+<ion-content class="ion-padding">
+  <div *ngIf="isLoading" class="ion-text-center">
     <ion-spinner color="primary"></ion-spinner>
   </div>
   <form [formGroup]="form" *ngIf="!isLoading">
